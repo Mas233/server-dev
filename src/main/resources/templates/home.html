@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<h1>Contacts</h1>
+<form method="POST" th:object="${contact}">
+    <label for="firstName"> First Name:</label>
+    <input type="text" th:field="*{firstName}" />
+    <span class="validationError"
+          th:if="${#fields.hasErrors('firstName')}"
+          th:errors="*{firstName}">firstName</span>
+    <br/>
+    <label for="lastName"> Last Name:</label>
+    <input type="text" th:field="*{lastName}" />
+    <span class="validationError"
+          th:if="${#fields.hasErrors('lastName')}"
+          th:errors="*{lastName}">lastName</span>
+    <br/>
+    <label for="phoneNumber"> Phone Number:</label>
+    <input type="text" th:field="*{phoneNumber}" />
+    <span class="validationError"
+          th:if="${#fields.hasErrors('phoneNumber')}"
+          th:errors="*{phoneNumber}">phoneNumber</span>
+    <br/>
+    <label for="emailAddress"> Email:</label>
+    <input type="text" th:field="*{emailAddress}" />
+    <span class="validationError"
+          th:if="${#fields.hasErrors('emailAddress')}"
+          th:errors="*{emailAddress}">emailAddress</span>
+    <br/>
+    <input type="submit"/>
+</form>
+<ul th:each="_contact : ${contacts.getContacts()}">
+    <li>
+        <span th:text="${_contact.firstName}">First</span>
+        <span th:text="${_contact.lastName}">Last</span>
+        <span th:text="${_contact.phoneNumber}">Phone</span>
+        <span th:text="${_contact.emailAddress}">Email</span>
+    </li>
+</ul>
+</body>
+</html>
