@@ -36,7 +36,7 @@
     <br/>
     <input type="submit"/>
 </form>
-<ul th:each="_contact : ${contacts.getContacts()}">
+<ul th:each="_contact : ${contacts}">
     <li>
         <span th:text="${_contact.firstName}">First</span>
         <span th:text="${_contact.lastName}">Last</span>
