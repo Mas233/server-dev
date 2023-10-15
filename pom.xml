@@ -115,18 +115,12 @@
             <artifactId>aspectjweaver</artifactId>
             <version>1.7.2</version>
         </dependency>
-        <!-->Homework5:database</-->
+        <!-- homework6:noSQL:mangoDB -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <!-->(end)Homework5:database</-->
-
+       <!-- end:homework6 -->
     </dependencies>
 
     <build>

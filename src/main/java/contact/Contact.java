@@ -1,21 +1,22 @@
 package contact;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 
 @Data
-@Entity
+@Document
 public class Contact {
     @Id
-    private Long id;
+    private String id;
 
     @NotNull(message="First name must not be empty!")
     @Size(min = 1, message = "First name at least contains 1 character!")

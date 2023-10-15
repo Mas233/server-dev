@@ -44,7 +44,6 @@ public class ContactController {
         if(errors.hasErrors()){
             return "home";
         }
-        contact.setId((long) (this.contacts().size()));
         contactRepo.save(contact);
         return "redirect:/";
     }
