@@ -1,6 +1,6 @@
 package contact.data;
 
-import contact.Contact;
+import contact.beans.Contact;
 import org.springframework.data.repository.CrudRepository;
 
 

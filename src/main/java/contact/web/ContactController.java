@@ -3,7 +3,7 @@ package contact.web;
 
 import javax.validation.Valid;
 
-import contact.Contact;
+import contact.beans.Contact;
 import contact.data.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,7 +14,7 @@ import java.util.List;
 
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/home")
 public class ContactController {
 
     private final ContactRepository contactRepo;
@@ -45,6 +45,6 @@ public class ContactController {
             return "home";
         }
         contactRepo.save(contact);
-        return "redirect:/";
+        return "redirect:/home";
     }
 }

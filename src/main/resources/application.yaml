@@ -7,3 +7,6 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017/contact
 #end::setDatabaseName[]
+logging:
+  level:
+    root: debug
